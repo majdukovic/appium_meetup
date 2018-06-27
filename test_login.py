@@ -24,9 +24,9 @@ class TestLogin():
         self.driver.find_element_by_id('com.matchbook.client:id/tvButton').click()
         self.driver.find_element_by_id('com.matchbook.client:id/loginButton').click()
         self.driver.find_element_by_id('com.matchbook.client:id/editTextUsername').click()
-        self.driver.find_element_by_id('com.matchbook.client:id/editTextUsername').send_keys('majdukovic')
+        self.driver.find_element_by_id('com.matchbook.client:id/editTextUsername').send_keys('username')
         self.driver.find_element_by_id('com.matchbook.client:id/editTextPassword').click()
-        self.driver.find_element_by_id('com.matchbook.client:id/editTextPassword').send_keys('password1')
+        self.driver.find_element_by_id('com.matchbook.client:id/editTextPassword').send_keys('password')
         self.driver.hide_keyboard()
         self.driver.find_element_by_id('com.matchbook.client:id/buttonLogIn').click()
         assert_true(self.driver.find_element_by_id('com.matchbook.client:id/activatePin').is_displayed(),
