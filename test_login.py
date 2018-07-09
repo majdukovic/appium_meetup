@@ -6,12 +6,11 @@ class TestLogin():
 
     # Set desired capabilities
     desired_caps = {}
-    desired_caps['app'] = '/Users/teammatchbook/mate_appium/MB_4_1_1_app.apk'
+    desired_caps['app'] = '/Users/majdukovic/Documents/MB_4_1_1_app.apk'
     desired_caps['platformName'] = 'Android'
     desired_caps['platformVersion'] = '7.0'
-    #desired_caps['deviceName'] = 'Xiaomi Redmi Note 4'
-    desired_caps['deviceName'] = 'Galaxy Nexus 7.0.0'
-    desired_caps['avd'] = 'Galaxy_Nexus_7.0.0'
+    desired_caps['deviceName'] = 'Galaxy Nexus 7.0'
+    desired_caps['avd'] = 'Galaxy_Nexus_7.0'
     desired_caps['appWaitPackage'] = 'com.matchbook.client'
     desired_caps['appWaitActivity'] = 'com.android.xanadu.matchbook.MainActivity'
     desired_caps['autoGrantPermissions'] = True
