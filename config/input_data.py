@@ -6,5 +6,5 @@ global input_data
 input_data = {
     'correct_username_production': 'username',
     'correct_password_production': 'password',
-    'correct_pin' : '1111',
+    'correct_pin': '1111'
     }

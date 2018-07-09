@@ -1,4 +1,4 @@
-from devices_local import desired_caps
+from config.devices_local import desired_caps
 global config
 
 '''

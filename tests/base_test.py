@@ -28,7 +28,7 @@ class BaseTest(object):
                     self.driver.find_element(*self._exchange_button_android).click()
                 except:
                     print "Exchange button is not visible"
-        else:
+        elif self.os == 'ios':
             time.sleep(5)
             try:
                 self.driver.switch_to.alert.accept()
@@ -38,6 +38,8 @@ class BaseTest(object):
                     self.driver.find_element(*self._exchange_button_ios).click()
                 except:
                     print "Exchange button is not visible"
+        else:
+            print "OS not recognized."
 
     def tearDown(self):
         self.driver.quit()
