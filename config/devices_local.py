@@ -5,12 +5,14 @@ global desired_caps
 
 desired_caps = {
     'google_nexus_7_0': {
-        'app': '/Users/majdukovic/Documents/MB_4_1_1_app.apk',
+        'app': 'bs://01a8c30b4030c925153f690b12c5f02f6b033718',
         'platformName': 'Android',
         'platformVersion': '7.0',
-        'deviceName': 'Google Nexus 7.0',
-        'avd': 'Galaxy_Nexus_7.0',
+        'deviceName': 'Samsung Galaxy S8',
+        'browserstack.idleTimeout': '10',
+        'browserstack.local': True,
         'appWaitPackage': 'com.matchbook.client',
         'appWaitActivity': 'com.android.xanadu.matchbook.MainActivity',
         'autoGrantPermissions' : True
     }
+}

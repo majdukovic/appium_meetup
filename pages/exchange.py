@@ -21,3 +21,13 @@ class ExchangePage(Page):
     _account_button_android = (By.ID, 'com.matchbook.client:id/action_account')
     _account_balance_android = (By.ID, 'com.matchbook.client:id/account_balance')
     _back_offer_buttons_android = (By.XPATH, '//android.widget.RelativeLayout[@resource-id="com.matchbook.client:id/rlRunnerB"]')
+
+    def openLoginPage(self):
+        self.driver.find_element(*getattr(self, '_join_login_button_' + self.os)).click()
+        return self.login_page
+
+    def openAccountPage(self):
+        from pages.account import AccountPage
+        self.account_page = AccountPage(self.driver)
+        self.driver.find_element(*getattr(self, '_account_button_' + self.os)).click()
+        return self.account_page

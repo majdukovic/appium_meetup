@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 from appium.webdriver.common.mobileby import By, MobileBy
-from tests.base_test import BaseTest
-#from pages.header import HeaderPage
-#from pages.modal_windows.pin_modal import PinModal
 from pages.page import Page
 
 
@@ -13,8 +10,6 @@ class LoginPage(Page):
 
     def __init__(self, driver):
         super(LoginPage, self).__init__(driver)
-        self.header_page = HeaderPage()
-        self.pin_modal = PinModal(self.driver)
         self.os = str(self.driver.desired_capabilities['platformName']).lower()
 
     # Login page Android
@@ -56,7 +51,7 @@ class LoginPage(Page):
                 @param username: string - Username provided will be used while logging in
                 @param password: string - Password provided will be used while logging in
         '''
-        from mobile_automation.pages.exchange import ExchangePage
+        from pages.exchange import ExchangePage
         self.exchange_page = ExchangePage(self.driver)
         if self.os == 'android':
             self.driver.find_element(*getattr(self, '_username_field_' + self.os)).send_keys(username)

@@ -2,7 +2,7 @@ from config.devices_local import desired_caps
 global config
 
 '''
-   Local configuration file for Android device (Samsung Galaxy Nexus, OS v7.0)
+   Remote configuration file for Android device (Samsung Galaxy S8, OS v7.0)
 '''
 
 config = {}
@@ -11,7 +11,7 @@ config = {}
 ##      SERVER     ##
 ######################
 
-config['server_url'] = 'http://localhost:4723/wd/hub'
+config['server_url'] = 'https://sharedqaaccount1:o4xZw3chZPaMFMMxy2iB@hub-cloud.browserstack.com/wd/hub'
 
 
 ######################
