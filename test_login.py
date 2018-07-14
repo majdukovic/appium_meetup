@@ -6,7 +6,7 @@ class TestLogin():
 
     # Set desired capabilities
     desired_caps = {}
-    desired_caps['app'] = 'app_location' #change (credentials.txt)
+    desired_caps['app'] = 'bs://01a8c30b4030c925153f690b12c5f02f6b033718' #change (credentials.txt)
     desired_caps['platformName'] = 'Android'
     desired_caps['platformVersion'] = '7.0'
     desired_caps['deviceName'] = 'Samsung Galaxy S8'
@@ -14,10 +14,11 @@ class TestLogin():
     desired_caps['appWaitActivity'] = 'com.android.xanadu.matchbook.MainActivity'
     desired_caps['autoGrantPermissions'] = True
     desired_caps['browserstack.idleTimeout'] = '10'
+    desired_caps['browserstack.local'] = True
 
     def setup(self):
         # Start webdriver
-        self.driver = webdriver.Remote('server_location', self.desired_caps) #change (credentials.txt)
+        self.driver = webdriver.Remote('https://sharedqaaccount1:o4xZw3chZPaMFMMxy2iB@hub-cloud.browserstack.com/wd/hub', self.desired_caps) #change (credentials.txt)
         self.driver.implicitly_wait(10)
 
     def test_01_login(self):
@@ -27,10 +28,10 @@ class TestLogin():
         self.driver.find_element_by_id('com.matchbook.client:id/loginButton').click()
         #time.sleep(2)
         self.driver.find_element_by_id('com.matchbook.client:id/editTextUsername').click()
-        self.driver.find_element_by_id('com.matchbook.client:id/editTextUsername').send_keys('username')
+        self.driver.find_element_by_id('com.matchbook.client:id/editTextUsername').send_keys('majdukovic')
         self.driver.find_element_by_id('com.matchbook.client:id/editTextPassword').click()
         #time.sleep(1)
-        self.driver.find_element_by_id('com.matchbook.client:id/editTextPassword').send_keys('password')
+        self.driver.find_element_by_id('com.matchbook.client:id/editTextPassword').send_keys('lozinka1')
         self.driver.hide_keyboard()
         #time.sleep(2)
         self.driver.find_element_by_id('com.matchbook.client:id/buttonLogIn').click()
@@ -41,7 +42,7 @@ class TestLogin():
         self.driver.find_element_by_id('com.matchbook.client:id/pin1').send_keys('1111')
         #time.sleep(2)
         self.driver.find_element_by_id('com.matchbook.client:id/pinPwd').click()
-        self.driver.find_element_by_id('com.matchbook.client:id/pinPwd').send_keys('password')
+        self.driver.find_element_by_id('com.matchbook.client:id/pinPwd').send_keys('lozinka1')
         #time.sleep(2)
         self.driver.find_element_by_id('com.matchbook.client:id/okButton').click()
         #time.sleep(2)
