@@ -1,6 +1,6 @@
 # appium_meetup
 
-Repository for Mobile Monday meetup where I was talking about automating tests for Android & iOS platform using Appium automation framework and Python programming language.
+Repository for Mobile Monday meetup where I gave talk about automating tests for Android & iOS platform using Appium automation framework and Python programming language.
 
 Presented a couple of scenarios:
   1. Writing first test (logging in and enabling PIN login functionality)
