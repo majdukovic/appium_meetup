@@ -1,4 +1,4 @@
-# appium_meetup
+# Mobile Monday meetup (Introduction to mobile automation with Appium + Python)
 
 Repository for Mobile Monday meetup where I gave talk about automating tests for Android & iOS platform using Appium automation framework and Python programming language.
 
